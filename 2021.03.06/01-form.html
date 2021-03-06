@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form példa</title>
+    <meta name="Author" content="Kovács Attila">
+</head>
+
+<body>
+    <form name="urlap" method="GET">
+        <div id="container" style="border: brown solid 10px; width: 50%; margin: auto;">
+            Vezetéknév: <br>
+            <input type="text" name="vnev" id="vnev" minlength="3" value="Adél" required> <br><br>
+            Keresztnév: <br>
+            <input type="text" name="knev" id="knev" minlength="5" placeholder="Kérem a keresznevét!" required><br><br>
+            Kora: <br><input type="number" name="kora" id="kora" min="1" max="100" value="20"><br><br>
+            Születési év: <input type="date" name="szev" id="szev"> <br><br>
+        </div>
+        Checkbox <br>
+        Bicikli <input type="checkbox" name="bicikli"> <br>
+        <input type="checkbox" name="motor">Motor <br><br>
+
+        Rádiógomb <br>
+        <input type="radio" name="gender" value="women" checked>Nő <br>
+        <input type="radio" name="gender" value="man">Férfi <br>
+
+        Combobox <br>
+        <select name="autok">
+            <option value="audi">Audi</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="volvo" selected>Volvo</option>
+            <option value="skoda">Skoda</option>
+            <option value="suzuki">Suzuki</option>
+        </select>
+        <br><br>
+
+        <input type="color" name="szin"><br><br>
+
+
+
+        <input type="submit" value="OK">
+
+    </form>
+
+</body>
+
+</html>
