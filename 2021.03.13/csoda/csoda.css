@@ -1,0 +1,26 @@
+body{
+    background-image: url("Kepek/bg5.gif");
+    position: absolute;
+    background-repeat: repeat-x;
+    margin: 50px 35px 0 35px;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+
+h1{
+    font-size: 24px;
+    color: #900;
+    text-align: center;
+}
+
+h2{
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: justify;
+    color: #006;
+}
+
