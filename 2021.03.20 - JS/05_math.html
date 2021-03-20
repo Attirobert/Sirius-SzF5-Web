@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+    <meta name="Author" content="Kovács Attila">
+</head>
+<body>
+<form name="urlap">
+    Sugár: <input type="number" id="sugar"><br>
+    Magasság: <input type="number" id="magas" value="0.0"><br>
+    <input type="button" value="Számítás" onclick="henger(document.urlap.sugar.value, document.urlap.magas.value)">
+</form>
+</body>
+</html>
+<script>
+    function henger(r, m){
+        var c = Math.pow(parseFloat(r), 2) * Math.PI * parseFloat(m);
+        alert("A henger térfogata: " + c);
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>try-catch példa</title>
+    <script>
+        // Készítsünk egy új hiba objektumot
+        badNameError = new Error("Felhasználó neve nem megfelelő!");
+        noNameError = new Error("Felhasználó neve nem lehet üres");
+
+        // általános hibakezelés
+        // ami megjelenik az üzenetben
+        // De akár azt is megteheted hogy saját magad által elkészített kivételkezelést csinálsz
+
+        function mainExceptionHandler(e) {
+            alert(e.message);
+        }
+
+        // általános form érvényesítő rész, amit meghívok HTML kódból
+        function validateForm() {
+            checkName();
+        }
+
+        // ellenőrzi az értéket
+        // Hiba esetén a függvényt hívja meg
+        function checkName() {
+            try {
+                if (document.forms[0].username.value == "") {
+                    throw noNameError;
+                }
+                if (document.forms[0].username.value != "john") {
+                    throw badNameError;
+                }
+            } catch (e) {
+                // minden más hiba esetén ez a rész fut le	
+                mainExceptionHandler(e);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onSubmit="validateForm()">
+        Kérem a felhasználó nevét: <input type="text" name="username"> <br>
+        <input type="submit" name="submit" value="Go">
+    </form>
+</body>
+
+</html>

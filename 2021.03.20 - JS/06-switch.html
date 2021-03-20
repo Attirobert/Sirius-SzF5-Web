@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Osztályozás</title>
+    <meta name="Author" content="Kovács Attila">
+    <script>
+        function jegy(p){
+            let pontszam = parseInt(p);
+            let s ="Osztályzata: ";
+            switch (true) {
+                case (pontszam < 40):
+                    s += "elégtelen (1)";
+                    break;
+                case (pontszam < 55):
+                    s += "elégséges (2)";
+                    break;
+                case (pontszam < 70):
+                    s += "közepes (3)";
+                    break;
+                case (pontszam < 85):
+                    s += "jó (4)";
+                    break;
+                case (pontszam < 101):
+                    s += "jeles (5)";
+                    break;
+            
+                default:
+                    s = "Hibás adat!";
+                    break;
+            }
+
+            alert(s);
+        }
+    </script>
+</head>
+<body>
+<form name="urlap">
+    Elért pontszám: <input type="number" name="pont" min="0" max="100" >
+    <input type="button" value="Jegy" onclick="jegy(document.urlap.pont.value)">
+</form>
+</body>
+</html>

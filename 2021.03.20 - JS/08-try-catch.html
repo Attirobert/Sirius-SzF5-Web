@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Try-Catch példa</title>
+    <meta name="Author" content="Kovács Attila">
+<script>
+    // Saját hiba objektum deklarálása
+    noNameError = new Error("A felhasználó neve nem lehet üres!");
+    badNameError = new Error("Csak Kovács léphet be!");
+
+    function mainExceptionHandler(e) {
+        alert(e.message);
+    }
+
+    // Általános form validáló eljárás
+    function validateForm(){
+        checkName();
+    }
+
+    function checkName(){
+        
+        var n = document.urlap.username.value;
+        try {
+            // Nem lehet üres
+            if (n == "") {
+                alert("Itt vagyok:" + n);
+                throw noNameError;
+            }
+
+            // Csak Kovács lehet
+            if (n != "Kovács") {
+                throw badNameError;
+            }
+        } catch (e) {
+            // Minden más hiba esetén a rendszer hibakezelője fut
+            mainExceptionHandler(e);
+        }
+    }
+</script>
+</head>
+<body>
+<form name="urlap" onsubmit="validateForm()">
+    <input type="text" name="username" id="username" placeholder="Kérem a nevét!">
+    <input type="submit" name="submit" value="OK">
+</form>
+</body>
+</html>

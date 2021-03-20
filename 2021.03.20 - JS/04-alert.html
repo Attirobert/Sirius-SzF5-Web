@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert</title>
+    <meta name="Author" content="Kovács Attila">
+<script>
+    function koszon(neve){
+        alert("Szia " + neve + "!\nÜdvözöl a JS kód!");
+    }
+</script>
+</head>
+<body>
+<form name="urlap">
+    <input type="text" placeholder="Kérem a neved" id="nev"><br>
+    <input type="button" value="Köszönés" onclick="alert('Szia! ' + document.urlap.nev.value)"><br><br>
+    <input type="button" value="JS Köszönt" onclick="koszon(document.urlap.nev.value)"><br>
+
+</form>
+</body>
+</html>
