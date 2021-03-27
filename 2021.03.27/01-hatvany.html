@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>2 hatványai</title>
+    <meta name="Author" content="Kovács Attila">
+</head>
+<body>
+<table>
+    <tr>
+        <th>Hatvány</th>
+        <th>Érték</th>
+    </tr>
+    <script>
+        for (let i = 0; i < 16; i++) {
+            if (i==0) ertek = 1;
+            else ertek *= 2;
+            document.write("<tr><td>2<sup>"+ i + "</sup></td><td>" + ertek + "</td></tr>")
+        }
+    </script>
+</table>
+</body>
+</html>

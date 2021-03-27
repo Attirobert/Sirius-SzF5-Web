@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Háromszög területe</title>
+    <meta name="Author" content="Kovács Attila">
+</head>
+<body>
+<form name="adatok">
+    Háromszög alapja: <input type="text" id="h_alap"><br>
+    Háromszög magassága: <input type="text" id="magassag"> <br>
+    <input type="button" value="Számítás"
+        onclick="szamitas(document.adatok.h_alap.value, document.adatok.magassag.value)">
+</form>
+</body>
+
+</html>
+<script>
+    function szamitas(h_alap, magassag) {
+
+        var alapertek = parseInt(h_alap);
+        var magassagertek = parseInt(magassag);
+        var OK = true;
+
+        if (isNaN(alapertek)) {
+            alert("Az alap megadása hibás");
+            OK = false;
+        }
+        
+        if (isNaN(magassagertek)) {
+            alert("A magasság megadása hibás");
+            OK = false;
+        }
+        if (OK){
+            var ertek = alapertek * magassagertek / 2;
+            alert(ertek);
+        }
+    }
+    </script>
+</body>
+</html>
