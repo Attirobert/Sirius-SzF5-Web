@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Poliform példa</title>
+    <meta name="Author" content="Kovács Attila">
+    <script src="05-poliform.js"></script>
+</head>
+<body>
+<div>
+    <script>
+        // Létre hozzuk a szereplőket (Példányosítjuk az osztályokat)
+        otthon = new House("Édes otthon");
+        eva = new Women("Éva", "zöld");
+        zsuzsa = new Women("Zsuzsa", "barna");
+        orsi = new Women("Orsi", "kék");
+        kati = new Women("Kati", "zöld");
+        adam = new Ferfi("Ádám", 51);
+        david = new Ferfi("Dávid", 24);
+        otto = new Ferfi("Ottó", 65);
+        feri = new Ferfi("Feri", 17);
+
+        // Beköltöztetjük a házba
+        otthon.hazajon(eva);
+        otthon.hazajon(zsuzsa);
+        otthon.hazajon(orsi);
+        otthon.hazajon(kati);
+        otthon.hazajon(adam);
+        otthon.hazajon(david);
+        otthon.hazajon(otto);
+        otthon.hazajon(feri);
+
+
+
+
+    </script>
+    <input type="button" value="Csengő" onclick="otthon.csenget()">
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - byClass</title>
+    <meta name="Author" content="Kovács Attila">
+    <script>
+        function szinez(){
+            //var x = document.getElementsByClassName("example");
+            var x = document.getElementsByTagName("p");
+            var y = x.length;
+            for (let i = 0; i < y; i++) {
+                if (i % 2 == 0) {
+                    x[i].style.backgroundColor = "yellow";
+                }else{
+                    x[i].style.backgroundColor = "lightblue";
+                }
+                              
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="example">
+    <p>P elem az 1. div-ben. Class = example</p>
+</div>
+<div class="example color">
+    <p>P elem az 2. div-ben. Class = example, color</p>
+</div>
+<div class="example color">
+    <p>P elem az 3. div-ben. Class = example, color</p>
+</div>
+<input type="button" value="Szinezz!" onclick="szinez()">
+</body>
+</html>

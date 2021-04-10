@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Függvények</title>
+    <meta name="Author" content="Kovács Attila">
+    <script>
+        function fv(){
+            alert("Hagyományos deklarálás");
+        }
+
+        var fv2 = function () {
+            alert("Függvény változó deklarálás");
+        }
+
+        var fv3 = () => 
+            alert("Nyíl (arrow) operátorral deklarálás");
+
+        var fv4 = (a, b) => a*b;
+        
+    </script>
+</head>
+<body>
+<input type="button" value="fv()" onclick="fv()">
+<input type="button" value="fv2()" onclick="fv2()">
+<input type="button" value="fv3()" onclick="fv3()">
+
+<p id="szam"><script>document.write(fv4(2,15));</script></p>
+</body>
+</html>

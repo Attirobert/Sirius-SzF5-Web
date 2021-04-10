@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP példa</title>
+    <meta name="Author" content="Kovács Attila">
+    <script>
+        class Pelda{
+            constructor(nev){
+                this.name = nev;
+            }
+        }
+
+        class Ferfi extends Pelda{
+            constructor(nev, kor){
+                super(nev);
+                this.kor = kor;
+            }
+        }
+    </script>
+</head>
+<body>
+<script>
+    var pista = new Pelda("Pista");
+    alert(pista.name);
+    var feri = new Ferfi("Feri", 48);
+    alert(feri.name+"\n"+feri.kor);
+</script>
+</body>
+</html>
